@@ -1,25 +1,26 @@
-#include <iostream>
-int main(){
-    size_t a{};
-    std::cout<<"Please enter the number you want to start pattern from : ";
-    scanf("%d",&a);
-    int number{1};
-    for(size_t i{1};i<=a; i++){
-        for(size_t b{1};b<=a;b++){
-            std::cout<<number<<" ";
-            number++;                        
+#include<iostream>
+int main (){
+    size_t n{};
+    std::cout<<"enter the number : ";
+    std::cin>>n; 
+    for(size_t i {0};i<n;i++){
+        static int start{1};
+        for(size_t a{0};a<(i+1);a++){
+            std::cout<<start<<" ";
         }
         std::cout<<std::endl;
+            start++;
     }
-    size_t c{};
-    std::cout<<"enter your number : ";
-    std::cin>>c;
-    char starter='A';
-    for(size_t i {1};i<=c;i++){
-        for(size_t a{1}; a<=c;a++){
+    // character patten
+    size_t d{};
+    std::cout<<"number dal be : ";
+    std::cin>>d;
+    for(size_t i {};i<d;i++){
+        static char starter{'A'};
+        for(size_t a{};a<(i+1);a++){
             std::cout<<starter<<" ";
-            starter++;
         }
         std::cout<<std::endl;
+        starter++;
     }
 }
